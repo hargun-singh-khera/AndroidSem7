@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- added permission to download content from the internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyThirdApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity7"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity8"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity6"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity5"
+            android:exported="false" />
+        <activity
+            android:name=".AysncTaskDemo"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".CustomListViewClass"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity9"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".UnboundServiceDemo" />
+        <service android:name=".ForegroundDemo" />
+        <service android:name=".BoundServiceDemo" />
+        <service android:name=".JobSchedulerDemo"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+
+<!--        registering the broadcast reciever-->
+        <receiver android:name=".BroadCastRecieverDemo" />
+    </application>
+
+</manifest>
