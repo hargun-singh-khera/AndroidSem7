@@ -20,9 +20,11 @@ class MainActivity9 : AppCompatActivity() {
         startJob.setOnClickListener {
             jobScheduler = getSystemService(JOB_SCHEDULER_SERVICE) as JobScheduler
             val componentName = ComponentName(this, JobSchedulerDemo::class.java)
+//            creating object of JobInfo
             val builder = JobInfo.Builder(123, componentName)
             builder.setMinimumLatency(1000)
             builder.setOverrideDeadline(3000)
+//            service will get enable as soon as device gets booted
             builder.setPersisted(true)
             builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
             builder.setRequiresCharging(false)
@@ -36,6 +38,5 @@ class MainActivity9 : AppCompatActivity() {
                 Toast.makeText(this, "Job Cancelled", Toast.LENGTH_SHORT).show()
             }
         }
-
     }
 }

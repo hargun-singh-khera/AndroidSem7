@@ -16,8 +16,11 @@ class MainActivity7 : AppCompatActivity() {
 
         startBtn.setOnClickListener {
             val intent = Intent(this,ForegroundDemo::class.java)
+            // passing data through intent
             intent.putExtra("inputExtra", "Foreground Service is running...")
             ContextCompat.startForegroundService(this, intent)
+//            OR
+//            startService(intent)
         }
         stopBtn.setOnClickListener {
             stopService(Intent(this,ForegroundDemo::class.java))

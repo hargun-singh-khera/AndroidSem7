@@ -16,7 +16,7 @@ class JobSchedulerDemo: JobService() {
             PendingIntent.FLAG_IMMUTABLE)
         val alarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
         alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), pendingIntent)
-        Toast.makeText(this@JobSchedulerDemo, "ALarm set", Toast.LENGTH_LONG).show()
+        Toast.makeText(this@JobSchedulerDemo, "Alarm set", Toast.LENGTH_LONG).show()
         return true
     }
 
